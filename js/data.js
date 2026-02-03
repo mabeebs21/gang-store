@@ -35,8 +35,9 @@ const categoryNames = {
   
     // ===== non-weapon =====
     { id: 20, label: "weed", price: 500, category: "drugs", img: "assets/drugs/weed.png" },
-    { id: 21, label: "meth", price: 2500, category: "drugs", img: "assets/drugs/meth.png" },
-    { id: 22, label: "vest", price: 2000, category: "vest", img: "assets/vest/armour.png" }
+    { id: 21, label: "meth", price: 2500, category: "drugs", img: "assets/drugs/meth.png" }, 
+    { id: 22, label: "cocaine", price: 750, category: "drugs", img: "assets/drugs/cocaine.png" },  
+    { id: 23, label: "vest", price: 2000, category: "vest", img: "assets/vest/armour.png" }
   ];
   
   
@@ -63,3 +64,4 @@ const categoryNames = {
     </section>
   `).join("")
   
+
