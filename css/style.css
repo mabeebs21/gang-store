@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #e63946;
+  --bg-dark: #0a0a0a;
+  --card-bg: #161616;
+  --transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: #f1f1f1;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #800000, var(--primary));
+  padding: 30px;
+  text-align: center;
+}
+
+/* FORM */
+.form {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.form input {
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 450px;
+  background: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: white;
+  outline: none;
+}
+
+/* CATEGORY */
+.category-wrapper {
+  margin-bottom: 60px;
+  padding: 0 5%;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.category-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  opacity: 0.5;
+}
+
+/* ITEMS GRID */
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.item {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  border: 1px solid var(--primary);
+}
+
+.item img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.item button {
+  margin-top: 10px;
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CART */
+.cart {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 30px;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid rgba(255,0,0,0.3);
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart button {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.cart .confirm {
+  width: 100%;
+  margin-top: 15px;
+  background: var(--primary);
+  color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
